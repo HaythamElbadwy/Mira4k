@@ -1087,6 +1087,9 @@ Scroll Bar Style
     .norflo-hide-adminbar.offcanvas.offcanvas-top {
         top: 45px;
     }
+    .navbar .others-options {
+        margin-left: 150px !important;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 760px) {
@@ -1159,6 +1162,7 @@ Scroll Bar Style
     .section-title.mb-90 {
         margin-bottom: 40px !important;
     }
+ 
 }
 
 /* Min width 1200px to Max width 1399px */
@@ -2258,6 +2262,9 @@ Cart Offcanvas Style
     .movie-home-navbar.norflo-hide-adminbar {
         top: 32px;
     }
+    .others-options{
+        margin-top: 10.5px;
+    }
 }
 
 /* Min width 768px to Max width 991px */
@@ -2275,6 +2282,9 @@ Cart Offcanvas Style
     }
     .src-offcanvas {
         max-width: 100%;
+    }
+    .others-options{
+        margin-top: 10.5px;
     }
 }
 
@@ -2442,6 +2452,9 @@ Cart Offcanvas Style
     }
     .navbar.mt-20 {
         margin-top: 0;
+    }
+    .others-options{
+        margin-top: 10.5px;
     }
 }
 
@@ -4766,7 +4779,7 @@ Cart Offcanvas Style
     text-align: center;
     color: var(--whiteColor);
     padding: 19px 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .copyright-area p span {
@@ -11756,4 +11769,27 @@ body {
 }
 .copyright-area {
     background-color: var(--primaryColor) !important;
+}
+.language{
+    display: flex;
+    align-items: center; 
+    color: #B8ADAE;
+}
+.language span {
+    margin-right: 25px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    transition: all .5s ease;
+    cursor: pointer
+}
+
+.language span img {
+    margin: 0 3.5px
+}
+
+.language span:hover {
+    color: var(--primaryColor)
+}
+.language .english{
+    display: none;
 }
