@@ -782,7 +782,48 @@
             </div>
         </div>
     </div>
-
+    <div class="offers-popup" id="popup">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="closeOffersPopUp()"  aria-label="Close"></button>
+        <!-- <button type="button" onclick="closeOffersPopUp()" data-modal-hide="popup-modal">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+            <span class="sr-only">Close modal</span>
+        </button> -->
+        <img src="wp-content/uploads/2024/10/add-ons-768x530.webp" alt="">
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="closeOffersPopUp()" class="btn active"
+            data-translation="planButton">Subscribe Now</a>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="col-form-label">Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="col-form-label">Phone:</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your Phone">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Start Navbar Area -->
     <nav class="navbar navbar-expand-lg bg-white p-0 ott-platform-navbar " id="navbar">
         <div class="container mw-1685 position-relative">
@@ -808,13 +849,16 @@
                             title="Home" href="#service" class="nav-link" data-translation="service">Service</a></li>
                     <li id="menu-item-832"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832 nav-item"><a
-                            title="Pricing Plan" href="#pricing-plan" class="nav-link" data-translation="pricingPlan">Pricing Plan</a></li>
+                            title="Pricing Plan" href="#pricing-plan" class="nav-link"
+                            data-translation="pricingPlan">Pricing Plan</a></li>
                     <li id="menu-item-832"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832 nav-item"><a
-                            title="Home" href="#testimonial" class="nav-link" data-translation="testimonial">Testimonial</a></li>
+                            title="Home" href="#testimonial" class="nav-link"
+                            data-translation="testimonial">Testimonial</a></li>
                     <li id="menu-item-833"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-833 nav-item"><a
-                            title="Contact Us" href="#contact-us" class="nav-link" data-translation="ContactUs">Contact Us</a></li>
+                            title="Contact Us" href="#contact-us" class="nav-link" data-translation="ContactUs">Contact
+                            Us</a></li>
                 </ul>
             </div>
 
@@ -825,16 +869,17 @@
                     </a>
                 </li>
                 <li>
-                    <div class="language"><span class="arabic"><img
-                                src="wp-content/uploads/2024/03/arabic-flag.png" width="20px" alt="arabic-flag">Arabic</span> <span
-                            class="english"><img src="wp-content/uploads/2024/03/english-flag.png" width="20px"
+                    <div class="language"><span class="arabic"><img src="wp-content/uploads/2024/03/arabic-flag.png"
+                                width="20px" alt="arabic-flag">Arabic</span> <span class="english"><img
+                                src="wp-content/uploads/2024/03/english-flag.png" width="20px"
                                 alt="english-flag">English</span>
                         <div class="bx bx-menu" id="menu-icon"></div>
                     </div>
                 </li>
 
                 <li class="d-none d-xl-block">
-                    <a href="https://wa.me/+4571377928" target="_blank" class="btn" data-translation="FreeTrial">Free Trial</a>
+                    <a href="https://wa.me/+4571377928" target="_blank" class="btn" data-translation="FreeTrial">Free
+                        Trial</a>
                 </li>
             </ul>
         </div>
@@ -858,13 +903,17 @@
                     data-bs-dismiss="offcanvas" aria-label="Close"><a href="#" data-translation="home">Home</a>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"
-                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#service" data-translation="service">Service</a></li>
+                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#service"
+                        data-translation="service">Service</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"
-                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#pricing-plan" data-translation="pricingPlan">Pricing Plan</a></li>
+                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#pricing-plan"
+                        data-translation="pricingPlan">Pricing Plan</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"
-                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#testimonial" data-translation="testimonial">Testimonial</a></li>
+                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#testimonial"
+                        data-translation="testimonial">Testimonial</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-833"
-                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#contact-us" data-translation="ContactUs">Contact Us</a></li>
+                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#contact-us"
+                        data-translation="ContactUs">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -929,8 +978,12 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-slider-item"
-                                                    style="background-image: url(wp-content/uploads/2024/10/slider-bg2.jpg)">
-                                                    <div class="container mw-1685">
+                                                    style="background-image: url(wp-content/uploads/2024/10/slider-bg1.webp)">
+                                                    <!-- <video id="video" height="240">
+                                                    <source src="wp-content/uploads/2024/video/weladrezktrailer.mp4"
+                                                    type="video/mp4" autoplay>
+                                                </video> -->
+                                                    <div id="video-details" class="container mw-1685">
                                                         <div class="ott-platform-slider-content" data-cue="fadeInLeft">
                                                             <ul class="meta">
                                                                 <li data-translation="THRILLER">
@@ -940,7 +993,7 @@
                                                                 <li data-translation="ACTION">
                                                                     ACTION </li>
                                                             </ul>
-                                                            <h2>The Last Warrior</h2>
+                                                            <h2>Welad Rezk Season3</h2>
                                                             <div class="rating-and-clock">
                                                                 <ul class="rating">
                                                                     <li>
@@ -977,15 +1030,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="inner-bottom-content">
-                                                                <h3 data-translation="homeTitleOne">Request A Free Trial.</h3>
-                                                                <p data-translation="homeTitleTwo">You can request a free 24-hour trial of the service
+                                                                <h3 data-translation="homeTitleOne">Request A Free
+                                                                    Trial.</h3>
+                                                                <p data-translation="homeTitleTwo">You can request a
+                                                                    free 24-hour trial of the service
                                                                     through the following form and we will contact you
                                                                     as soon as possible.</p>
                                                                 <ul class="btn-list">
                                                                     <li>
                                                                         <a href="https://wa.me/+4571377928"
                                                                             target="_blank" class="btn">
-                                                                            <span class="border-style" data-translation="subscribeBtn">Free Trail for 24
+                                                                            <span class="border-style"
+                                                                                data-translation="subscribeBtn">Free
+                                                                                Trail for 24
                                                                                 hours</span>
                                                                         </a>
                                                                     </li>
@@ -997,8 +1054,13 @@
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-slider-item"
-                                                    style="background-image: url(wp-content/uploads/2024/10/slider-bg1.jpg)">
-                                                    <div class="container mw-1685">
+                                                    style="background-image: url(wp-content/uploads/2024/10/slider-bg2.webp)">
+                                                    <!-- <video id="video" height="240">
+                                                        <source src="wp-content/uploads/2024/video/weladrezktrailer.mp4"
+                                                        type="video/mp4" autoplay>
+                                                    </video> -->
+
+                                                    <div id="video-details" class="container mw-1685">
                                                         <div class="ott-platform-slider-content" data-cue="fadeInLeft">
                                                             <ul class="meta">
                                                                 <li data-translation="HORROR">
@@ -1008,7 +1070,7 @@
                                                                 <li data-translation="ACTION">
                                                                     ACTION </li>
                                                             </ul>
-                                                            <h2>The Last Thunder</h2>
+                                                            <h2>Beekeeper</h2>
                                                             <div class="rating-and-clock">
                                                                 <ul class="rating">
                                                                     <li>
@@ -1045,15 +1107,19 @@
                                                                 </div>
                                                             </div>
                                                             <div class="inner-bottom-content">
-                                                                <h3 data-translation="homeTitleOne">Request A Free Trial.</h3>
-                                                                <p  data-translation="homeTitleTwo">You can request a free 24-hour trial of the service
+                                                                <h3 data-translation="homeTitleOne">Request A Free
+                                                                    Trial.</h3>
+                                                                <p data-translation="homeTitleTwo">You can request a
+                                                                    free 24-hour trial of the service
                                                                     through the following form and we will contact you
                                                                     as soon as possible.</p>
                                                                 <ul class="btn-list">
                                                                     <li>
                                                                         <a href="https://wa.me/+4571377928"
                                                                             target="_blank" class="btn">
-                                                                            <span class="border-style" data-translation="subscribeBtn">Free Trail for 24
+                                                                            <span class="border-style"
+                                                                                data-translation="subscribeBtn">Free
+                                                                                Trail for 24
                                                                                 hours</span>
                                                                         </a>
                                                                     </li>
@@ -1072,7 +1138,7 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="button-prev" >
+                                                <div class="button-prev">
                                                     <span data-translation="previous">PREVIOUS</span>
                                                 </div>
                                             </li>
@@ -1125,57 +1191,58 @@
                                     <div class="container">
                                         <div class="section-title d-flex justify-content-between align-items-center flex-wrap w-max-100"
                                             data-cues="zoomOut">
-                                            <h2 class="text-white" data-translation="LatestMovies">Latest Movies</h2>
+                                            <h2 class="text-white" data-translation="LatestMovies">Latest Movies And
+                                                Series</h2>
                                         </div>
                                     </div>
                                     <div class="swiper ott-platform-movies-1 mb-2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies1.webp"
+                                                    <img decoding="async"
+                                                        src="wp-content/uploads/2024/10/ashghalsha2a.webp" alt="Slider">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ott-platform-movies-card">
+                                                    <img decoding="async"
+                                                        src="wp-content/uploads/2024/10/bernamgramem.webp" alt="Slider">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ott-platform-movies-card">
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/ashash.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies2.webp"
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/elatwla2.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies3.webp"
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/elghawy.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies4.webp"
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/elmda7.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies1.webp"
-                                                        alt="Slider">
+                                                    <img decoding="async"
+                                                        src="wp-content/uploads/2024/10/kamlel3add.webp" alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies2.webp"
-                                                        alt="Slider">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies3.webp"
-                                                        alt="Slider">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies4.webp"
-                                                        alt="Slider">
+                                                    <img decoding="async"
+                                                        src="wp-content/uploads/2024/10/ashghalsha2a.webp" alt="Slider">
                                                 </div>
                                             </div>
 
@@ -1185,49 +1252,49 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies5.webp"
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/silo.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies6.webp"
+                                                    <img decoding="async"
+                                                        src="wp-content/uploads/2024/10/flightresk.webp" alt="Slider">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ott-platform-movies-card">
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/film1.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies7.webp"
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/film2.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies8.webp"
+                                                    <img decoding="async"
+                                                        src="wp-content/uploads/2024/10/aqamagabrya.webp" alt="Slider">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="ott-platform-movies-card">
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/silo.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies9.webp"
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/film1.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies10.webp"
-                                                        alt="Slider">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies11.webp"
-                                                        alt="Slider">
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="ott-platform-movies-card">
-                                                    <img decoding="async" src="wp-content/uploads/2024/10/movies12.webp"
+                                                    <img decoding="async" src="wp-content/uploads/2024/10/film2.webp"
                                                         alt="Slider">
                                                 </div>
                                             </div>
@@ -1263,17 +1330,12 @@
                                                             <a data-translation="livetvService">Live TV &#038;
                                                                 Streaming</a>
                                                         </h3>
-                                                        <p class="text-silver" data-translation="featuersItemThreeDesc">Activate multiple IPTV applications for
+                                                        <p class="text-silver" data-translation="featuersItemThreeDesc">
+                                                            Activate multiple IPTV applications for
                                                             free,
                                                             offering flexibility and convenience
                                                             to access your favorite content on different platforms
                                                             effortlessly.</p>
-                                                        <a href="https://wa.me/+4571377928" target="_blank"
-                                                            class="read-more style-two" data-translation="readmore">Read More <i
-                                                                class="ti ti-arrow-right"></i>
-                                                        </a>
-
-
                                                         <span class="count">1</span>
                                                     </div>
 
@@ -1292,16 +1354,11 @@
                                                         <h3>
                                                             <a data-translation="SelectedContents">Selected Contents</a>
                                                         </h3>
-                                                        <p class="text-silver" data-translation="featuersItemOneDesc">This feature allows users to select from
+                                                        <p class="text-silver" data-translation="featuersItemOneDesc">
+                                                            This feature allows users to select from
                                                             a variety of available servers,
                                                             providing flexibility and control over their connection
                                                             preferences.</p>
-                                                        <a href="https://wa.me/+4571377928" target="_blank"
-                                                            class="read-more style-two" data-translation="readmore">Read More <i
-                                                                class="ti ti-arrow-right"></i>
-                                                        </a>
-
-
                                                         <span class="count">2</span>
                                                     </div>
 
@@ -1317,18 +1374,14 @@
 
                                                         <img src="wp-content/uploads/2024/03/touch.png" alt="">
                                                         <h3>
-                                                            <a data-translation="featuersItemSixTitle">After Sales Service</a>
+                                                            <a data-translation="featuersItemSixTitle">After Sales
+                                                                Service</a>
                                                         </h3>
-                                                        <p class="text-silver" data-translation="featuersItemSixDesc">Benefit from reliable after-sales
+                                                        <p class="text-silver" data-translation="featuersItemSixDesc">
+                                                            Benefit from reliable after-sales
                                                             service,
                                                             ensuring continuous support and assistance to maintain your
                                                             satisfaction and address any concerns effectively.</p>
-                                                        <a href="https://wa.me/+4571377928" target="_blank"
-                                                            class="read-more style-two" data-translation="readmore">Read More <i
-                                                                class="ti ti-arrow-right"></i>
-                                                        </a>
-
-
                                                         <span class="count">3</span>
                                                     </div>
 
@@ -1369,13 +1422,17 @@
                                             <div class="col-lg-6 col-xl-5" data-cues="zoomOut">
                                                 <div class="our-content position-relative z-1">
 
-                                                    <span class="top-title" data-translation="aboutTitle"> OUR CONTENT</span>
+                                                    <span class="top-title" data-translation="aboutTitle"> OUR
+                                                        CONTENT</span>
                                                     <h2 class="text-white" data-translation="aboutTitleone">
                                                         More to Stream </h2>
-                                                    <p class="text-silver" data-translation="aboutDescTitle">With our large and comprehensive collection
+                                                    <p class="text-silver" data-translation="aboutDescTitle">With our
+                                                        large and comprehensive collection
                                                         of TV channels, never miss your favorite sports games and TV
                                                         shows. You can be the first to see your new episode.</p>
-                                                    <p><span class="text-white" data-translation="aboutDescTitleTwo">Watch exclusive sports channels every
+                                                    <p><span class="text-white"
+                                                            data-translation="aboutDescTitleTwo">Watch exclusive sports
+                                                            channels every
                                                             week. Get top-rated TV customer service. Bundle your
                                                             favorite services.</span></p>
 
@@ -1393,7 +1450,8 @@
                                                     </ul>
 
                                                     <a href="https://wa.me/+4571377928" class="btn"><span
-                                                            class="border-style" data-translation="ContactUs">Contact Us</span></a>
+                                                            class="border-style" data-translation="ContactUs">Contact
+                                                            Us</span></a>
 
                                                     <img decoding="async" src="wp-content/uploads/2024/03/shape-7.png"
                                                         class="shape shape-7" alt="Images">
@@ -1435,8 +1493,10 @@
                                                             alt="Images">
                                                     </div>
                                                     <div class="content">
-                                                        <h3 data-translation="servicetitle_1">Support Many Languages</h3>
-                                                        <p data-translation="servicetitleDesc_1">With personalized recommendations.</p>
+                                                        <h3 data-translation="servicetitle_1">Support Many Applications
+                                                        </h3>
+                                                        <p data-translation="servicetitleDesc_1">With personalized
+                                                            recommendations.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1447,8 +1507,10 @@
                                                             alt="Images">
                                                     </div>
                                                     <div class="content">
-                                                        <h3 data-translation="servicetitle_2">A Diverse Library Of Movies</h3>
-                                                        <p data-translation="servicetitleDesc_2">Everyone gets their own login.</p>
+                                                        <h3 data-translation="servicetitle_2">A Diverse Library Of
+                                                            Movies</h3>
+                                                        <p data-translation="servicetitleDesc_2">Everyone gets their own
+                                                            login.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1459,8 +1521,10 @@
                                                             alt="Images">
                                                     </div>
                                                     <div class="content">
-                                                        <h3 data-translation="servicetitle_3">Multiple Device Supports</h3>
-                                                        <p data-translation="servicetitleDesc_3">Watch on your favourite device.</p>
+                                                        <h3 data-translation="servicetitle_3">Multiple Device Supports
+                                                        </h3>
+                                                        <p data-translation="servicetitleDesc_3">Watch on your favourite
+                                                            device.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1521,13 +1585,15 @@
                                                     <h2 class="accordion-header">
                                                         <button class="accordion-button pt-0 " type="button"
                                                             data-bs-toggle="collapse" data-bs-target="#collapse1"
-                                                            aria-expanded="true" aria-controls="collapse1" data-translation="featuersItemOneTitle">
+                                                            aria-expanded="true" aria-controls="collapse1"
+                                                            data-translation="featuersItemOneTitle">
                                                             More than one server to choose from. </button>
                                                     </h2>
                                                     <div id="collapse1" class="accordion-collapse collapse  show "
-                                                        data-bs-parent="#accordionOns" >
+                                                        data-bs-parent="#accordionOns">
                                                         <div class="accordion-body">
-                                                            <p data-translation="featuersItemOneDesc">This feature allows users to select from a variety of
+                                                            <p data-translation="featuersItemOneDesc">This feature
+                                                                allows users to select from a variety of
                                                                 available servers,
                                                                 providing flexibility and control over their connection
                                                                 preferences.
@@ -1540,13 +1606,15 @@
                                                     <h2 class="accordion-header">
                                                         <button class="accordion-button pt-0 collapsed" type="button"
                                                             data-bs-toggle="collapse" data-bs-target="#collapse2"
-                                                            aria-expanded="true" aria-controls="collapse2" data-translation="featuersItemTwoTitle">
+                                                            aria-expanded="true" aria-controls="collapse2"
+                                                            data-translation="featuersItemTwoTitle">
                                                             24 hour free trial to confirm service </button>
                                                     </h2>
                                                     <div id="collapse2" class="accordion-collapse collapse "
                                                         data-bs-parent="#accordionOns">
                                                         <div class="accordion-body">
-                                                            <p data-translation="featuersItemTwoDesc">Enjoy a 24-hour free trial to explore and confirm the
+                                                            <p data-translation="featuersItemTwoDesc">Enjoy a 24-hour
+                                                                free trial to explore and confirm the
                                                                 quality of our service before making your decision</p>
                                                         </div>
                                                     </div>
@@ -1555,13 +1623,15 @@
                                                     <h2 class="accordion-header">
                                                         <button class="accordion-button pt-0 collapsed" type="button"
                                                             data-bs-toggle="collapse" data-bs-target="#collapse3"
-                                                            aria-expanded="true" aria-controls="collapse3" data-translation="featuersItemThreeTitle" >
+                                                            aria-expanded="true" aria-controls="collapse3"
+                                                            data-translation="featuersItemThreeTitle">
                                                             Free activation for more than one IPTV application </button>
                                                     </h2>
                                                     <div id="collapse3" class="accordion-collapse collapse "
                                                         data-bs-parent="#accordionOns">
                                                         <div class="accordion-body">
-                                                            <p data-translation="featuersItemThreeDesc"> Activate multiple IPTV applications for free,
+                                                            <p data-translation="featuersItemThreeDesc"> Activate
+                                                                multiple IPTV applications for free,
                                                                 offering flexibility and convenience to access your
                                                                 favorite content on different platforms effortlessly.
                                                             </p>
@@ -1572,13 +1642,15 @@
                                                     <h2 class="accordion-header">
                                                         <button class="accordion-button pt-0 collapsed" type="button"
                                                             data-bs-toggle="collapse" data-bs-target="#collapse4"
-                                                            aria-expanded="true" aria-controls="collapse4" data-translation="featuersItemFourTitle">
+                                                            aria-expanded="true" aria-controls="collapse4"
+                                                            data-translation="featuersItemFourTitle">
                                                             Technical support around the day </button>
                                                     </h2>
                                                     <div id="collapse4" class="accordion-collapse collapse "
                                                         data-bs-parent="#accordionOns">
                                                         <div class="accordion-body">
-                                                            <p data-translation="featuersItemFourDesc"> Get 24/7 technical support,
+                                                            <p data-translation="featuersItemFourDesc"> Get 24/7
+                                                                technical support,
                                                                 ensuring assistance is always available to resolve
                                                                 issues and enhance your service experience anytime.</p>
                                                         </div>
@@ -1588,13 +1660,15 @@
                                                     <h2 class="accordion-header">
                                                         <button class="accordion-button pt-0 collapsed" type="button"
                                                             data-bs-toggle="collapse" data-bs-target="#collapse5"
-                                                            aria-expanded="true" aria-controls="collapse5" data-translation="featuersItemFiveTitle">
+                                                            aria-expanded="true" aria-controls="collapse5"
+                                                            data-translation="featuersItemFiveTitle">
                                                             Competitive prices </button>
                                                     </h2>
                                                     <div id="collapse5" class="accordion-collapse collapse "
                                                         data-bs-parent="#accordionOns">
                                                         <div class="accordion-body">
-                                                            <p data-translation="featuersItemFiveDesc"> Enjoy high-quality services at competitive prices,
+                                                            <p data-translation="featuersItemFiveDesc"> Enjoy
+                                                                high-quality services at competitive prices,
                                                                 offering exceptional value to meet your needs without
                                                                 compromising your budget.</p>
                                                         </div>
@@ -1604,13 +1678,15 @@
                                                     <h2 class="accordion-header">
                                                         <button class="accordion-button pt-0 collapsed" type="button"
                                                             data-bs-toggle="collapse" data-bs-target="#collapse6"
-                                                            aria-expanded="true" aria-controls="collapse6" data-translation="featuersItemSixTitle">
+                                                            aria-expanded="true" aria-controls="collapse6"
+                                                            data-translation="featuersItemSixTitle">
                                                             After-sales service </button>
                                                     </h2>
                                                     <div id="collapse6" class="accordion-collapse collapse "
                                                         data-bs-parent="#accordionOns">
                                                         <div class="accordion-body">
-                                                            <p data-translation="featuersItemSixDesc">Benefit from reliable after-sales service,
+                                                            <p data-translation="featuersItemSixDesc">Benefit from
+                                                                reliable after-sales service,
                                                                 ensuring continuous support and assistance to maintain
                                                                 your satisfaction and address any concerns effectively.
                                                             </p>
@@ -1671,49 +1747,58 @@
                                                             alt="Images">
 
                                                         <div class="amount">
-                                                            <span class="months" data-translation="month">12 Months</span>
+                                                            <span class="months" data-translation="month">12
+                                                                Months</span>
                                                             <h2 data-translation="price_1">15 EURO</h2>
-                                                            <span class="renew" data-translation="renew">No Auto-renew.</span>
+                                                            <span class="renew" data-translation="renew">No
+                                                                Auto-renew.</span>
                                                         </div>
 
                                                         <ul class="ps-0 list-unstyled pricing-list">
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planOneDetails1">Subscribe for 12 months without
+                                                                <span data-translation="planOneDetails1">Subscribe for
+                                                                    12 months without
                                                                     interruption</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planOneDetails2"> Including all sports channels and all world
+                                                                <span data-translation="planOneDetails2"> Including all
+                                                                    sports channels and all world
                                                                     channels</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planOneDetails3"> A movie library containing: 14499 movies</span>
+                                                                <span data-translation="planOneDetails3"> A movie
+                                                                    library containing: 14499 movies</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planOneDetails4"> A series library containing: 5143 series</span>
+                                                                <span data-translation="planOneDetails4"> A series
+                                                                    library containing: 5143 series</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planOneDetails5"> More than 7391 live TV channels</span>
+                                                                <span data-translation="planOneDetails5"> More than 7391
+                                                                    live TV channels</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                         </ul>
 
                                                         <a href="https://api.whatsapp.com/send/?phone=%2B4571377928&text=I want to subscription for Silver Bouquets 15 EURO&type=phone_number&app_absent=0"
-                                                            target="_blank" class="btn active" data-translation="planButton">Subscribe Now</a>
+                                                            target="_blank" class="btn active"
+                                                            data-translation="planButton">Subscribe Now</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-xl-4 col-md-6">
                                                 <div class="pricing-single-item style-two">
-                                                    <span class="ignite d-block" data-translation="planNameTwo">Gold Bouquets</span>
+                                                    <span class="ignite d-block" data-translation="planNameTwo">Gold
+                                                        Bouquets</span>
 
                                                     <div class="pricing-content bg-mg"
                                                         data-background="wp-content/uploads/2024/03/pricing-bg-2.webp">
@@ -1722,49 +1807,58 @@
                                                             alt="Images">
 
                                                         <div class="amount">
-                                                            <span class="months" data-translation="month">12 Months</span>
+                                                            <span class="months" data-translation="month">12
+                                                                Months</span>
                                                             <h2 data-translation="price_2">35 EURO</h2>
-                                                            <span class="renew" data-translation="renew">No Auto-renew.</span>
+                                                            <span class="renew" data-translation="renew">No
+                                                                Auto-renew.</span>
                                                         </div>
 
                                                         <ul class="ps-0 list-unstyled pricing-list">
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planTwoDetails1">Subscribe for 12 months without
+                                                                <span data-translation="planTwoDetails1">Subscribe for
+                                                                    12 months without
                                                                     interruption</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planTwoDetails2"> Including all sports channels and all world
+                                                                <span data-translation="planTwoDetails2"> Including all
+                                                                    sports channels and all world
                                                                     channels</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planTwoDetails3"> A movie library containing: 10144 movie</span>
+                                                                <span data-translation="planTwoDetails3"> A movie
+                                                                    library containing: 10144 movie</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planTwoDetails4"> A series library containing: 4866 series</span>
+                                                                <span data-translation="planTwoDetails4"> A series
+                                                                    library containing: 4866 series</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planTwoDetails5"> More than 12480 live TV channels</span>
+                                                                <span data-translation="planTwoDetails5"> More than
+                                                                    12480 live TV channels</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                         </ul>
 
                                                         <a href="https://api.whatsapp.com/send/?phone=%2B4571377928&text=I want to subscription for Gold Bouquets 35 EURO&type=phone_number&app_absent=0"
-                                                            target="_blank" class="btn active" data-translation="planButton">Subscribe Now</a>
+                                                            target="_blank" class="btn active"
+                                                            data-translation="planButton">Subscribe Now</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-xl-4 col-md-6">
                                                 <div class="pricing-single-item style-two">
-                                                    <span class="ignite d-block"  data-translation="planNameThree">Diamond Bouquets</span>
+                                                    <span class="ignite d-block"
+                                                        data-translation="planNameThree">Diamond Bouquets</span>
 
                                                     <div class="pricing-content bg-mg"
                                                         data-background="wp-content/uploads/2024/03/pricing-bg-3.webp">
@@ -1773,52 +1867,61 @@
                                                             alt="Images">
 
                                                         <div class="amount">
-                                                            <span class="months" data-translation="month">12 Months</span>
+                                                            <span class="months" data-translation="month">12
+                                                                Months</span>
                                                             <h2 data-translation="price_3">40 EURO</h2>
-                                                            <span class="renew" data-translation="renew">No Auto-renew.</span>
+                                                            <span class="renew" data-translation="renew">No
+                                                                Auto-renew.</span>
                                                         </div>
 
                                                         <ul class="ps-0 list-unstyled pricing-list">
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planThreeDetails1">Subscribe for 12 months without
+                                                                <span data-translation="planThreeDetails1">Subscribe for
+                                                                    12 months without
                                                                     interruption</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planThreeDetails2"> Including all sports channels and all world
+                                                                <span data-translation="planThreeDetails2"> Including
+                                                                    all sports channels and all world
                                                                     channels</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planThreeDetails3"> A movie library containing: 13590 movies</span>
+                                                                <span data-translation="planThreeDetails3"> A movie
+                                                                    library containing: 13590 movies</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planThreeDetails4"> A series library containing: 15974 series</span>
+                                                                <span data-translation="planThreeDetails4"> A series
+                                                                    library containing: 15974 series</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                             <li
                                                                 class="d-flex justify-content-between align-items-center">
-                                                                <span data-translation="planThreeDetails5"> More than 10978 live TV channels</span>
+                                                                <span data-translation="planThreeDetails5"> More than
+                                                                    10978 live TV channels</span>
                                                                 <i class="ti ti-circle-check"></i>
                                                             </li>
                                                         </ul>
 
                                                         <a href="https://api.whatsapp.com/send/?phone=%2B4571377928&text=I want to subscription for Diamond Bouquets 40 EURO&type=phone_number&app_absent=0"
-                                                            target="_blank" class="btn active" data-translation="planButton">Subscribe Now</a>
+                                                            target="_blank" class="btn active"
+                                                            data-translation="planButton">Subscribe Now</a>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-12 text-center mt-4 mt-lg-5">
 
-                                                <p class="text-silver" data-translation="pricefooter"> A free 24-hour trial of the service. <a
-                                                        href="https://wa.me/+4571377928" target="_blank"
-                                                        class="read-more style-two text-grey-teal" data-translation="learnmore">Learn More <i
+                                                <p class="text-silver" data-translation="pricefooter"> A free 24-hour
+                                                    trial of the service. <a href="https://wa.me/+4571377928"
+                                                        target="_blank" class="read-more style-two text-grey-teal"
+                                                        data-translation="learnmore">Learn More <i
                                                             class="ti ti-arrow-right"></i></a> </p>
 
                                             </div>
@@ -1845,7 +1948,8 @@
                                             <div class="section-title text-center mw-860 m-auto mb-90">
                                                 <h2 class="text-white" data-translation="testimonialtitle">
                                                     Being Nice Shouldn’t Be An Afterthought </h2>
-                                                <p class="text-white" data-translation="testimonialtitle_1">The reviews are in and we’re as obsessed with your
+                                                <p class="text-white" data-translation="testimonialtitle_1">The reviews
+                                                    are in and we’re as obsessed with your
                                                     internet as you are.</p>
                                             </div>
                                             <div class="position-relative z-1">
@@ -2050,13 +2154,15 @@
                                                                 <button class="accordion-button pt-0 " type="button"
                                                                     data-bs-toggle="collapse"
                                                                     data-bs-target="#collapse1" aria-expanded="true"
-                                                                    aria-controls="collapse1" data-translation="question_1">
+                                                                    aria-controls="collapse1"
+                                                                    data-translation="question_1">
                                                                     Devices that you Support? </button>
                                                             </h2>
                                                             <div id="collapse1" class="accordion-collapse collapse show"
                                                                 data-bs-parent="#accordionExample2">
                                                                 <div class="accordion-body">
-                                                                    <p data-translation="answer_1">We supported web, mobile (iOS & Android),
+                                                                    <p data-translation="answer_1">We supported web,
+                                                                        mobile (iOS & Android),
                                                                         TV (Samsung, LG), and smart devices.</p>
                                                                 </div>
                                                             </div>
@@ -2066,13 +2172,15 @@
                                                                 <button class="accordion-button pt-0 collapsed"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#collapse2" aria-expanded="true"
-                                                                    aria-controls="collapse2" data-translation="question_2">
+                                                                    aria-controls="collapse2"
+                                                                    data-translation="question_2">
                                                                     How I get technical support from Mira4k? </button>
                                                             </h2>
                                                             <div id="collapse2" class="accordion-collapse collapse "
                                                                 data-bs-parent="#accordionExample2">
-                                                                <div class="accordion-body" >
-                                                                    <p data-translation="answer_2">To obtain technical support from Mira4K,
+                                                                <div class="accordion-body">
+                                                                    <p data-translation="answer_2">To obtain technical
+                                                                        support from Mira4K,
                                                                         following <a href="https://wa.me/+4571377928"
                                                                             target="_blank">This Link</a> </p>
                                                                 </div>
@@ -2083,13 +2191,15 @@
                                                                 <button class="accordion-button pt-0 collapsed"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#collapse3" aria-expanded="true"
-                                                                    aria-controls="collapse3" data-translation="question_3">
+                                                                    aria-controls="collapse3"
+                                                                    data-translation="question_3">
                                                                     How long before I can use the service? </button>
                                                             </h2>
                                                             <div id="collapse3" class="accordion-collapse collapse "
                                                                 data-bs-parent="#accordionExample2">
-                                                                <div class="accordion-body" >
-                                                                    <p data-translation="answer_3">You can start using the service immediately after
+                                                                <div class="accordion-body">
+                                                                    <p data-translation="answer_3">You can start using
+                                                                        the service immediately after
                                                                         your payment is confirmed.</p>
                                                                 </div>
                                                             </div>
@@ -2099,14 +2209,15 @@
                                                                 <button class="accordion-button pt-0 collapsed"
                                                                     type="button" data-bs-toggle="collapse"
                                                                     data-bs-target="#collapse4" aria-expanded="true"
-                                                                    aria-controls="collapse4" data-translation="question_4"
-                                                                    >
+                                                                    aria-controls="collapse4"
+                                                                    data-translation="question_4">
                                                                     What’s about Refund Policy? </button>
                                                             </h2>
                                                             <div id="collapse4" class="accordion-collapse collapse "
                                                                 data-bs-parent="#accordionExample2">
                                                                 <div class="accordion-body">
-                                                                    <p data-translation="answer_4">The refund policy depends on the terms set by the
+                                                                    <p data-translation="answer_4">The refund policy
+                                                                        depends on the terms set by the
                                                                         provider. Please check the official refund
                                                                         policy or contact customer support for details.
                                                                     </p>
@@ -2149,7 +2260,8 @@
                                                     <div class="ott-overview-btn">
 
                                                         <a href="https://wa.me/+4571377928" target="_blank" class="btn">
-                                                            <span class="border-style" data-translation="planButton">Subscribe Now</span>
+                                                            <span class="border-style"
+                                                                data-translation="planButton">Subscribe Now</span>
                                                         </a>
 
                                                     </div>
@@ -2178,13 +2290,14 @@
     <div class="footer-area pt-100 pb-75 bg-secondary bg-img"
         data-background="wp-content/uploads/2024/03/footer-shape.png" id="contact-us">
         <div class="container mw-1356">
-            <div class="row">
+            <div class="row justify-content-between">
                 <div class="footer-single-widget column-item  auto widget_footer_widget">
                     <div class="mw-250">
                         <a href="#" class="d-inline-block footer-logo">
                             <img src="wp-content/uploads/2024/03/Logo.png" alt="Mira4k">
                         </a>
-                        <p data-translation="footer_1">Helping our communities connect, work, &amp; thrive since 1952</p>
+                        <p data-translation="footer_1">Helping our communities connect, work, &amp; thrive since 2012
+                        </p>
                         <h4 data-translation="footer_2">Social Media</h4>
                         <ul class="ps-0 mb-0 list-unstyled d-flex social-links">
                             <li>
@@ -2203,7 +2316,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.snapchat.com/add/mira4k.tv?share_id=Lc18AXDrYMI&locale=en-GB" target="_blank">
+                                <a href="https://www.snapchat.com/add/mira4k.tv?share_id=Lc18AXDrYMI&locale=en-GB"
+                                    target="_blank">
                                     <i class="ri-snapchat-fill"></i>
                                 </a>
                             </li>
@@ -2212,56 +2326,8 @@
                     </div>
 
                 </div>
-                <div class="footer-single-widget column-item  auto widget_nav_menu">
-                    <h3 data-translation="service">Services</h3>
-                    <div class="menu-services-menu-container">
-                        <ul id="menu-services-menu" class="menu">
-                            <li id="menu-item-884"
-                                class="menu-item menu-item-type-post_type menu-item-object-service menu-item-884"><a
-                                    href="#">TV</a></li>
-                    </div>
-                </div>
-                <div class="footer-single-widget column-item  auto widget_nav_menu">
-                    <h3 data-translation="Company">Company</h3>
-                    <div class="menu-company-menu-container">
-                        <ul id="menu-company-menu" class="menu">
-                            <li id="menu-item-887"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-887"><a
-                                    href="#" data-translation="home">Home</a></li>
-                            <li id="menu-item-889"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-889"><a
-                                    href="#service" data-translation="service">Service</a></li>
-                            <li id="menu-item-891"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-891"><a
-                                    href="#pricing-plan" data-translation="pricingPlan">Pricing Plan</a></li>
-                            <li id="menu-item-886"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-886">
-                                <a rel="privacy-policy" href="#testimonial" data-translation="testimonial">Testimonial</a>
-                            </li>
-                            <li id="menu-item-888"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888"><a
-                                    href="#contact-us" data-translation="ContactUs">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-single-widget column-item  auto widget_nav_menu">
-                    <h3 data-translation="footertitle">Information</h3>
-                    <div class="menu-important-links-container">
-                        <ul id="menu-important-links" class="menu">
-                            <li id="menu-item-892"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-892"><a
-                                    href="#" data-translation="blog">Blog</a></li>
-                            <li id="menu-item-895"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-895"><a
-                                    href="#service" data-translation="service">Services</a></li>
-                            <li id="menu-item-894"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-894"><a
-                                    target="_blank" data-translation="location"
-                                    href="https://www.google.com/maps/place/Tivoli+Gardens,+Vesterbrogade+3,+1620+K%C3%B8benhavn+V,+Denmark">Location
-                                    In Map</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+
                 <div class="footer-single-widget column-item  auto widget_norflo_contact_info">
                     <h3 data-translation="footerContact">Get In Touch</h3>
                     <ul class="ps-0 mb-0 list-unstyled contact-links">

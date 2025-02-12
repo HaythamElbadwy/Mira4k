@@ -17,7 +17,24 @@ const setLanguage = (e) => {
         (document.querySelector(".english").style.display = "ar" == e ? "block" : "none");
 };
 
+// var video = document.getElementById('video')
 
+// // When the 'ended' event fires
+// video.addEventListener('ended', function(){
+//   // Reset the video to 0
+//   video.currentTime = 0;
+//   // And pause ready for
+//   video.pause();
+// }); 
+
+function closeOffersPopUp(){
+    document.getElementById('popup').style.display = 'none '
+}
+function openSubscripePopUp(){
+    document.getElementById('subscribeModal').style.display = 'block '
+    document.getElementById('popup').style.display = 'none '
+    
+}
 // Partner Slide JS
 var swiper = new Swiper(".partner-slide", {
     slidesPerView: 1,

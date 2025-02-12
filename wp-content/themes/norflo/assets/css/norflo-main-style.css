@@ -11793,3 +11793,45 @@ body {
 .language .english{
     display: none;
 }
+.offers-popup{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 50;
+    backdrop-filter: blur(4px);
+    
+}
+.offers-popup img{
+width: 40%;
+margin-bottom: 10px;
+}
+.offers-popup button{
+    position: absolute;
+    top: 11px;
+    right: 5px;
+    font-size: 17px;
+    background-color: white; 
+    color: white;
+}
+
+@media(max-width: 767px){
+    .offers-popup img{
+        width: 95%;
+    }
+    
+}
+
+.show{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.modal-dialog{
+    width: 100%;
+}
