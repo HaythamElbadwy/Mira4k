@@ -11805,7 +11805,7 @@ body {
     flex-direction: column;
     z-index: 50;
     backdrop-filter: blur(4px);
-    
+    -webkit-backdrop-filter: blur(4px);
 }
 .offers-popup img{
 width: 40%;
