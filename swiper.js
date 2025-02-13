@@ -17,16 +17,29 @@ const setLanguage = (e) => {
         (document.querySelector(".english").style.display = "ar" == e ? "block" : "none");
 };
 
-// var video = document.getElementById('video')
+document.addEventListener("DOMContentLoaded", function () {
+    const whatsappIcon = document.querySelector(".whatsapp-icon");
+    const whatsappPopup = document.querySelector(".whatsapp-popup");
+    const sendButton = document.querySelector("#sendButton");
+    const messageInput = document.querySelector("#messageInput");
 
-// // When the 'ended' event fires
-// video.addEventListener('ended', function(){
-//   // Reset the video to 0
-//   video.currentTime = 0;
-//   // And pause ready for
-//   video.pause();
-// }); 
+    // Toggle WhatsApp popup visibility
+    whatsappIcon.addEventListener("click", function () {
+        whatsappPopup.classList.toggle("active");
+    });
 
+    // Send message via WhatsApp
+    sendButton.addEventListener("click", function () {
+        const message = messageInput.value.trim();
+        if (message) {
+            const phoneNumber = "+4571596445"; // Replace with your WhatsApp number
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            sendButton.setAttribute("href", whatsappURL);
+        } else {
+            alert("Please enter a message before sending.");
+        }
+    });
+});
 function closeOffersPopUp(){
     document.getElementById('popup').style.display = 'none '
 }

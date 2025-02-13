@@ -11835,3 +11835,120 @@ margin-bottom: 10px;
 .modal-dialog{
     width: 100%;
 }
+
+
+/* Floating WhatsApp Button */
+#floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25d366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+}
+
+/* WhatsApp Popup */
+.whatsapp-popup {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.whatsapp-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Popup Header */
+.popup-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #25d366;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.popup-details h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.popup-details p {
+    font-size: 12px;
+}
+
+/* Popup Message */
+.popup-message {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Popup Input */
+.popup-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.popup-input input {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.popup-input a {
+    background-color: #25d366;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-input a:hover {
+    background-color: #1da851;
+}
