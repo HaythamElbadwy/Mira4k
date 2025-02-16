@@ -83,7 +83,7 @@ function submit() {
         handleSubscribe(subscribe)
         
     } else {
-console.log('a7aaaa');
+console.log('error');
 
 
     }
