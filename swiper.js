@@ -92,7 +92,7 @@ console.log('error');
 
 
 function validateUserName() {
-    var regexName = /^[a-z]{3,50}$/;
+    var regexName = /^([a-zA-Z]+)(\s[a-zA-Z]+)*$/;
     if (regexName.test(document.getElementById('name').value) == true) {
         document.getElementById("wrongName").classList.add("d-none");
         return true
