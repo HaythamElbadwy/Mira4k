@@ -7,6 +7,9 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <title>The Best IPTV App for Live Channels and Streaming in High Quality</title>
 
+    <!-- Phone CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+
     <!-- Meta Description -->
     <meta name="description"
         content="Enjoy the best IPTV experience with our app. Live channels, movies, and series in high quality. Try it now!">
@@ -782,8 +785,8 @@
             </div>
         </div>
     </div>
-     <!-- START Floating WHATSAPP -->
-     <div id="floating-whatsapp">
+    <!-- START Floating WHATSAPP -->
+    <div id="floating-whatsapp">
         <div class="whatsapp-icon">
             <img src="wp-content/uploads/2024/03/whatsapp.jfif" alt="WhatsApp Avatar">
         </div>
@@ -812,35 +815,60 @@
         <a data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="closeOffersPopUp()" class="btn active"
             data-translation="planButton">Subscribe Now</a>
     </div>
-    <div class="modal fade subscripe_modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade align-items-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Subscribe Now</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
                             <label for="name" class="col-form-label">Name:</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your Name">
+                            <input type="text" class="form-control" id="name" placeholder="Enter your Name"
+                                oninput="validateUserName()">
+                            <p class="text-danger d-none" id="wrongName">Invalid Name(suppose start the capital
+                                character)</p>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="col-form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your Email">
+                            <input type="email" class="form-control" id="email" placeholder="Enter your Email"
+                                oninput="validateEmail()">
+                            <p class="text-danger d-none" id="wrongEmail">Email not valid *exemple@yyy.com</p>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="col-form-label">Phone:</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter your Phone">
+                            <label for="phone" class="col-form-label">Phone:</label> <br />
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your Phone"
+                                oninput="validatePhone()">
+                            <p id="phoneAlert" class="text-danger w-100 mt-2 d-none">
+                                Enter valid Phone Number
+                            </p>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Subscribe</button>
+                    <button type="button" class="btn btn-primary" onclick="submit()" id="subscribeNow">Subscribe</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- START POPUP DONE SUBSCRIBE -->
+    <div class="subscripe-popup d-none" id="subscripePopup">
+        <div class="popup-modal bg-white text-black">
+            <div class="popup-icon">
+
+                <i class="ri-check-line"></i>
+            </div>
+            <h2>Welcome To Our Family</h2>
+            <p>The Sales team will contact you as soon as possible</p>
+            <button id="closeBtn" onclick="closeSubscripePopup()" type="button">OK</button>
+        </div>
+    </div>
+    <!-- END POPUP DONE SUBSCRIBE -->
+
     <!-- Start Navbar Area -->
     <nav class="navbar navbar-expand-lg bg-white p-0 ott-platform-navbar " id="navbar">
         <div class="container mw-1685 position-relative">
@@ -929,8 +957,8 @@
                     data-bs-dismiss="offcanvas" aria-label="Close"><a href="#testimonial"
                         data-translation="testimonial">Testimonial</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-833"
-                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#contact-us"
-                        data-translation="ContactUs" target="_blank">Contact Us</a></li>
+                    data-bs-dismiss="offcanvas" aria-label="Close"><a href="#contact-us" data-translation="ContactUs"
+                        target="_blank">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -1764,7 +1792,7 @@
                                                         <div class="amount">
                                                             <span class="months" data-translation="month">12
                                                                 Months</span>
-                                                            <h2 data-translation="price_1">15 EURO</h2>
+                                                            <h2 data-translation="price_1">20 EURO</h2>
                                                             <span class="renew" data-translation="renew">No
                                                                 Auto-renew.</span>
                                                         </div>
@@ -1824,7 +1852,7 @@
                                                         <div class="amount">
                                                             <span class="months" data-translation="month">12
                                                                 Months</span>
-                                                            <h2 data-translation="price_2">35 EURO</h2>
+                                                            <h2 data-translation="price_2">30 EURO</h2>
                                                             <span class="renew" data-translation="renew">No
                                                                 Auto-renew.</span>
                                                         </div>
@@ -2347,11 +2375,11 @@
                     <h3 data-translation="footerContact">Get In Touch</h3>
                     <ul class="ps-0 mb-0 list-unstyled contact-links">
                         <li>
-                            <a href="tel:+4571420355">+45 71 59 64 45</a>
+                            <a href="tel:+4571596445">+45 71 59 64 45</a>
                             <p class="mb-0" data-translation="footerTel_1">(for customer service and support)</p>
                         </li>
                         <li>
-                            <a href="tel:+4591676968">+45 71 42 03 55</a>
+                            <a href="tel:+4571420355">+45 71 42 03 55</a>
                             <p class="mb-0" data-translation="footerTel_2">(for Sales)</p>
 
                         </li>
@@ -2697,6 +2725,8 @@
             }
         };
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
     <script src="wp-content/plugins/elementor/assets/js/frontend.min.js" id="elementor-frontend-js"></script>
     <script src="translations.js"></script>
     <script src="swiper.js"></script>

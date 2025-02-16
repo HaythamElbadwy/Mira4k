@@ -1,3 +1,6 @@
+let userName = document.getElementById('name');
+let userEmail = document.getElementById('email');
+let userPhone = document.getElementById('phone');
 let languageSelector = document.querySelectorAll(".language span")
 
 languageSelector.forEach((e) => {
@@ -40,14 +43,109 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-function closeOffersPopUp(){
+function closeOffersPopUp() {
     document.getElementById('popup').style.display = 'none '
 }
-function openSubscripePopUp(){
-    document.getElementById('subscribeModal').style.display = 'block '
-    document.getElementById('popup').style.display = 'none '
-    
+
+
+
+const phoneInput = document.querySelector("#phone");
+const iti = window.intlTelInput(phoneInput, {
+    initialCountry: "auto", // Auto-detect country
+    geoIpLookup: function (callback) {
+        fetch('https://ipapi.co/json')
+            .then(response => response.json())
+            .then(data => callback(data.country_code))
+            .catch(() => callback("us"));
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+});
+function closeSubscripePopup() {
+    document.getElementById('subscripePopup').classList.add('d-none')
 }
+function subscripeSucess(){
+    document.getElementById('exampleModal').classList.remove('show')
+    document.querySelector('.modal-backdrop').classList.remove('show')
+    document.getElementById('exampleModal').style.display = 'none'
+    document.querySelector('.modal-backdrop').style.display = 'none'
+    document.body.style.overflow = "auto";
+    document.body.style.paddingRight = "0px";
+    document.getElementById('subscripePopup').classList.remove('d-none')
+}
+function submit() {
+    if (validateUserName() == true && validateEmail() == true && validatePhone() == true) {
+        let subscribe = {
+            name: userName.value,
+            email: userEmail.value,
+            phone: userPhone.value,
+
+        }
+        handleSubscribe(subscribe)
+        
+    } else {
+console.log('a7aaaa');
+
+
+    }
+
+}
+
+
+function validateUserName() {
+    var regexName = /^[a-z]{3,50}$/;
+    if (regexName.test(document.getElementById('name').value) == true) {
+        document.getElementById("wrongName").classList.add("d-none");
+        return true
+    } else {
+        document.getElementById("wrongName").classList.remove("d-none");
+        return false
+    }
+}
+function validateEmail() {
+    var regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (regexEmail.test(document.getElementById('email').value) == true) {
+        document.getElementById("wrongEmail").classList.add("d-none");
+        return true
+    } else {
+        document.getElementById("wrongEmail").classList.remove("d-none");
+        return false
+    }
+}
+function validatePhone() {
+    if (document.getElementById('phone').value == '') {
+        document.getElementById("phoneAlert").classList.remove("d-none");
+        return false
+    } else {
+        document.getElementById("phoneAlert").classList.add("d-none");
+        return true
+    }
+}
+
+const handleSubscribe = async (subscribe) => {
+    document.getElementById('subscribeNow').innerText = 'Loading...'
+    try {
+      const response = await fetch('https://mira4k.vercel.app/client/new', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(subscribe)
+      });
+      const data = await response.json();
+      if (response.status === 201) {
+        subscripeSucess()
+      } else {
+       
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('Login failed. Please try again.');
+    }finally{
+        document.getElementById('subscribeNow').innerText = 'Subscribe'
+    }
+  };
+
+
 // Partner Slide JS
 var swiper = new Swiper(".partner-slide", {
     slidesPerView: 1,

@@ -11827,10 +11827,9 @@ margin-bottom: 10px;
     
 }
 
-.moda .show{
+.show{
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
 }
 .modal-dialog{
     width: 100%;
@@ -11952,3 +11951,74 @@ margin-bottom: 10px;
 .popup-input a:hover {
     background-color: #1da851;
 }
+.iti{
+width: 100% !important;
+}
+.subscripe-popup{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99999;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.popup-icon{
+    font-size: 40px;
+    background: var(--primaryColor);
+    width: 60px;
+    height: 60px;
+    border-radius: 40%;
+    margin: -40px auto 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-icon i{
+ color: white;
+}
+.subscripe-popup button{
+    background: var(--primaryColor);
+    color: white;
+   padding: 10px;
+   width: 100%;
+   border-radius: 10px;
+   border: none;
+}
+.popup-modal{
+    padding: 15px;
+    width: 40%;
+    text-align: center;
+    border-radius: 10px;
+}
+@media(max-width: 640px){
+    .popup-modal{
+        width: 94%;
+    }
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
