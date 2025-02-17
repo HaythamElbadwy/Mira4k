@@ -2,6 +2,7 @@ let userName = document.getElementById('name');
 let userEmail = document.getElementById('email');
 let userPhone = document.getElementById('phone');
 let languageSelector = document.querySelectorAll(".language span")
+let countryCode;
 
 languageSelector.forEach((e) => {
     e.addEventListener("click", (e) => {
@@ -60,6 +61,13 @@ const iti = window.intlTelInput(phoneInput, {
     },
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
 });
+
+ // Log selected country to console
+ phoneInput.addEventListener("countrychange", function() {
+    const selectedCountry = iti.getSelectedCountryData();
+    countryCode = selectedCountry.dialCode;
+    console.log("Selected country:", selectedCountry.dialCode);
+});
 function closeSubscripePopup() {
     document.getElementById('subscripePopup').classList.add('d-none')
 }
@@ -77,7 +85,7 @@ function submit() {
         let subscribe = {
             name: userName.value,
             email: userEmail.value,
-            phone: userPhone.value,
+            phone: '+' + countryCode + ' ' + userPhone.value,
 
         }
         handleSubscribe(subscribe)
