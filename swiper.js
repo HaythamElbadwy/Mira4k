@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sendButton.addEventListener("click", function () {
         const message = messageInput.value.trim();
         if (message) {
-            const phoneNumber = "+4571596445"; // Replace with your WhatsApp number
+            const phoneNumber = "+4571420355"; // Replace with your WhatsApp number
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             sendButton.setAttribute("href", whatsappURL);
         } else {
