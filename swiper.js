@@ -62,8 +62,8 @@ const iti = window.intlTelInput(phoneInput, {
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
 });
 
- // Log selected country to console
- phoneInput.addEventListener("countrychange", function() {
+// Log selected country to console
+phoneInput.addEventListener("countrychange", function () {
     const selectedCountry = iti.getSelectedCountryData();
     countryCode = selectedCountry.dialCode;
     console.log("Selected country:", selectedCountry.dialCode);
@@ -71,7 +71,7 @@ const iti = window.intlTelInput(phoneInput, {
 function closeSubscripePopup() {
     document.getElementById('subscripePopup').classList.add('d-none')
 }
-function subscripeSucess(){
+function subscripeSucess() {
     document.getElementById('exampleModal').classList.remove('show')
     document.querySelector('.modal-backdrop').classList.remove('show')
     document.getElementById('exampleModal').style.display = 'none'
@@ -89,15 +89,12 @@ function submit() {
 
         }
         handleSubscribe(subscribe)
-        
+
     } else {
-console.log('error');
-
-
+        console.log('error');
     }
 
 }
-
 
 function validateUserName() {
     var regexName = /^([a-zA-Z]+)(\s[a-zA-Z]+)*$/;
@@ -132,26 +129,26 @@ function validatePhone() {
 const handleSubscribe = async (subscribe) => {
     document.getElementById('subscribeNow').innerText = 'Loading...'
     try {
-      const response = await fetch('https://mira4k.vercel.app/client/new', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(subscribe)
-      });
-      const data = await response.json();
-      if (response.status === 201) {
-        subscripeSucess()
-      } else {
-       
-      }
+        const response = await fetch('https://mira4k.vercel.app/client/new', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(subscribe)
+        });
+        const data = await response.json();
+        if (response.status === 201) {
+            subscripeSucess()
+        } else {
+
+        }
     } catch (error) {
-      console.error('Error during login:', error);
-      alert('Login failed. Please try again.');
-    }finally{
+        console.error('Error during login:', error);
+        alert('Login failed. Please try again.');
+    } finally {
         document.getElementById('subscribeNow').innerText = 'Subscribe'
     }
-  };
+};
 
 
 // Partner Slide JS
